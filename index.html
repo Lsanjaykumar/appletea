@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8d92229b07.js" crossorigin="anonymous"></script>
+    <title>Apple Tea</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        body {
+            margin: 0;
+            /* background-color: black; */
+        }
+
+        .bg {
+            background-image: url(images/main.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .container {
+            margin: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .head {
+            width: 80%;
+            margin: auto;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            color: white;
+        }
+
+        .head .left {
+            font-weight: 600;
+            font-size: 2em;
+            width: 50%;
+
+        }
+
+        .head .right {
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 3px;
+            border-radius: 100px;
+        }
+
+        .right>a:hover {
+            opacity: 1;
+            background-color: #fffb0b;
+            color: black;
+        }
+
+        .nice {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .n1 {
+            width: 100%;
+            font-size: 3em;
+            display: grid;
+            justify-content: center;
+            align-items: end;
+        }
+
+        .n2 {
+            width: 100%;
+            font-size: smaller;
+            display: grid;
+            grid-template-columns: auto;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .n3 {
+            width: 100%;
+            display: grid;
+            grid-template-columns: auto;
+            justify-content: center;
+        }
+
+        .n3>button {
+            background-color: orange;
+            width: 100%;
+            padding: 10px;
+            height: 50px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        section>.head {
+            color: black;
+            justify-content: center;
+        }
+
+        section>.head>h3 {
+            width: 100%;
+            text-align: center;
+        }
+        .hw .head{
+            color: black;
+            display: block;
+            text-align: center;
+        }
+        .what {
+            width: 80%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 35% 60%;
+            text-align: justify;
+            justify-content: space-between;
+        }
+
+        /* input[type="range"]{
+            width: 500px;
+            accent-color: yellow;
+        } */
+        #design,
+        #code,
+        #market {
+            accent-color: rgb(0, 0, 0);
+            -webkit-appearance: none;
+            width: 100%;
+            height: 15px;
+            outline-style: none;
+            border-radius: 3px;
+            background: #ffc20d;
+        }
+
+        aside .yellow {
+            background-color: #ffc20d;
+            color: black;
+            padding: 40PX;
+            display: grid;
+            grid-template-columns: 90%;
+            justify-content: center;
+            font-size: 2em;
+        }
+
+        .yellow>div {
+            display: grid;
+            justify-content: center;
+        }
+
+        aside .subscribe {
+            width: 100%;
+            font-size: 20px;
+            padding: 40px 0 0 0;
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20%;
+            justify-content: space-evenly;
+        }
+
+        #fname,
+        #lname,
+        #email,
+        #sub {
+            color: black;
+            opacity: 0.5;
+            padding: 10px 10px;
+        }
+
+        #sub {
+            background-color: #323232;
+            color: white;
+            cursor: pointer;
+        }
+
+        .black {
+            width: 100%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #323232;
+            color: white;
+        }
+
+        .black>.b-lorem {
+            padding: 0 230px;
+        }
+
+        .photo {
+            width: 80%;
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20%;
+            gap: 40px;
+            justify-content: space-evenly;
+            text-align: center;
+        }
+
+        .circle {
+            /* height: 195px;
+            width: 194px; */
+            padding: 4px;
+            /* background-color: ; */
+            border-radius: 50%;
+            border: solid 5px #ffc20d;
+        }
+
+        .p {
+            padding: 40px 0;
+        }
+
+        .p i {
+            background-color: #ffc20d;
+            padding: 10px 20px;
+        }
+
+        .portfolio {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+        }
+
+        .portfolio p {
+            padding: 0 200px;
+        }
+
+        /* .f-images {
+            display: grid;
+            grid-template-columns: 31% 31% 31%;
+            gap: 30px;
+            padding: 30px 0;
+        } */
+
+        .fi {
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+            gap: 30px;
+            padding: 40px;
+        }
+
+        .anchor {
+            padding: 20px;
+        }
+
+        .anchor a {
+            color: grey;
+            border: solid 1px yellow;
+            padding: 4px 20px;
+            border-radius: 5px;
+        }
+
+        .a {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: end;
+            background-image: url(images/1.webp);
+            background-size: cover;
+            width: 100%;
+            height: 300px;
+        }
+
+        .b {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: end;
+            background-image: url(images/2.webp);
+            background-size: cover;
+            width: 100%;
+            height: 300px;
+        }
+
+        .c {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: end;
+            background-image: url(images/3.webp);
+            background-size: cover;
+            width: 100%;
+            height: 300px;
+        }
+
+        .d {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: end;
+            background-image: url(images/5.webp);
+            background-size: cover;
+            width: 100%;
+            height: 300px;
+        }
+
+        .e {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: end;
+            background-image: url(images/6.webp);
+            background-size: cover;
+            width: 100%;
+            height: 300px;
+        }
+
+        .f {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: end;
+            background-image: url(images/7.webp);
+            background-size: cover;
+            width: 100%;
+            height: 300px;
+        }
+
+        .g {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: end;
+            background-image: url(images/8.webp);
+            background-size: cover;
+            width: 100%;
+            height: 300px;
+        }
+
+        .h {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: end;
+            background-image: url(images/9.webp);
+            background-size: cover;
+            width: 100%;
+            height: 300px;
+        }
+
+        .i {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: end;
+            background-image: url(images/4.webp);
+            background-size: cover;
+            width: 100%;
+            height: 300px;
+        }
+
+        .a1 {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: white;
+            padding: 10px;
+            text-align: left;
+            width: 100%;
+        }
+
+        .last {
+            width: 100%;
+            background-image: url(images/last1.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white
+        }
+
+        .last>div {
+            text-align: center;
+            padding: 10px 300px;
+        }
+
+        form {
+            padding: 100px;
+        }
+
+        #en,
+        #ea,
+        #ec,
+        #eya,
+        #ta {
+            width: 70%;
+            padding: 15px;
+            resize: none;
+        }
+
+        form>button {
+            background-color: #ffc20d;
+            color: white;
+            padding: 10px 40px;
+            border: 0;
+        }
+
+        .foa {
+            padding: 30px;
+        }
+
+        @media screen and (max-width:576px) {
+            .head .left {
+                width: 100%;
+                text-align: center;
+            }
+
+            .head .right {
+                width: 100%;
+                padding: 10px 0;
+
+            }
+            .what{
+                display: grid;
+                grid-template-columns: 100%;
+            }
+            .black>.b-lorem{
+                padding: 10px;
+            }
+            .photo{
+                display: grid;
+                grid-template-columns: 100%;
+                justify-content: center;
+            }
+           /* .circle{
+            height: 494px;
+            width: 485px;
+           } */
+           .portfolio{
+            width: 100%;
+           }
+           .portfolio>p{
+            padding: 15px;
+           }
+           .anchor{
+            width: 100%;
+           }
+           .anchor a{
+            padding: 5px;
+        }
+            .last>div,form{
+                padding: 0;
+            }
+            .fi{
+                display: grid;
+                grid-template-columns:100%;
+            }
+            .last{
+                padding: 40px;
+            }
+           aside .subscribe{
+            grid-template-columns: 50% 50%;
+           }
+        #fname,
+        #lname,
+        #email,
+        #sub {
+            margin: 10px;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="bg">
+            <div class="container">
+                <div class="head">
+                    <div class="left">
+                        LOGO DESIGN
+                    </div>
+                    <div class="right">
+                        <a href="h">Home</a>
+                        <a href="a">About</a>
+                        <a href="t">Team</a>
+                        <a href="p">Portfolio</a>
+                        <a href="c">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="head">
+                <div class="nice">
+                    <div class="n1">Nice to meet you</div>
+                    <div class="n2">We just don't build website, we build branches.</div>
+                    <div class="n3"><button>GET IN TOUCH</button></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="hw">
+                <div class="head">
+                    <h3>ABOUT US</h3>
+                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt porro culpa laboriosam </div>
+                </div>
+                <div class="what">
+                    <div class="box">
+                        <h3>WHAT CAN WE DO</h3>
+                        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Officia animi sequi qui ipsum dolor vero nesciunt unde sint,
+                            tempore impedit tempora maxime, Expedita, at dignissimos repellat id officiis sed impedit
+                            eius
+                            quod nostrum inventore praesentium facilis voluptates neque cum autem. Vel ab explicabo ut?
+                        </div>
+                    </div>
+                    <div class="box2">
+                        <div>
+                            <h3>&nbsp;</h3>
+                            DESIGN <br>
+                            <input type="range" min="25" max="100" name="d" id="design">
+                            <br></br>
+                            CODING <br>
+                            <input type="range" min="10" max="100" id="code"><br><br>
+                            MARKETING <br>
+                            <input type="range" min="10" max="100" id="market"><br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <aside>
+            <div class="yellow">
+                <div>SUBSCRIBE TO OUR NEWSLETTER</div>
+                <div class="subscribe">
+                    <input type="text" id="fname" placeholder="Sanjay">
+                    <input type="text" id="lname" placeholder="Kumar">
+                    <input type="email" id="email" placeholder="sanjay@123.com">
+                    <button id="sub">SUBSCRIBE</button>
+                </div>
+            </div>
+        </aside>
+        <section>
+            <div class="black">
+                <h3>OUR TEAM</h3>
+                <div class="b-lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor beatae aut, dolores
+                    vero ab veniam distinctio, ut voluptatibus fugiat minus eveniet ipsam obcaecati dolorem, quam
+                    mollitia.</div>
+                <div class="photo">
+                    <div class="p">
+                        <div class="circle"><img src="images/hi.png" alt="hi"></div>
+                        <h3>Name</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        <i class="fa fa-envelope"></i>
+                    </div>
+                    <div class="p">
+                        <div class="circle"><img src="images/hi.png" alt="hi"></div>
+                        <h3>Name</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        <i class="fa fa-envelope"></i>
+                    </div>
+                    <div class="p">
+                        <div class="circle"><img src="images/hi.png" alt="hi"></div>
+                        <h3>Name</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        <i class="fa fa-envelope"></i>
+                    </div>
+                    <div class="p">
+                        <div class="circle"><img src="images/hi.png" alt="hi"></div>
+                        <h3>Name</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        <i class="fa fa-envelope"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="portfolio">
+            <h3>PORTFOLIO</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptatibus hic mollitia veritatis
+                voluptas accusantium enim, minima dolorem laboriosam tempore.</p>
+            <div class="anchor">
+                <a href="a">All</a>
+                <a href="d">Design</a>
+                <a href="i">Identity</a>
+                <a href="p">Photography</a>
+                <a href="i">illudtration</a>
+            </div>
+            <div class="f-images">
+                <div class="fi">
+                    <div class="a">
+                        <div class="a1">
+                            <div>
+                                <h3>Title </h3>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="b">
+                        <div class="a1">
+                            <div>
+                                <h3>Title </h3>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c">
+                        <div class="a1">
+                            <div>
+                                <h3>Title </h3>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d">
+                        <div class="a1">
+                            <div>
+                                <h3>Title </h3>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="e">
+                        <div class="a1">
+                            <div>
+                                <h3>Title </h3>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f">
+                        <div class="a1">
+                            <div>
+                                <h3>Title </h3>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="g">
+                        <div class="a1">
+                            <div>
+                                <h3>Title </h3>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h">
+                        <div class="a1">
+                            <div>
+                                <h3>Title</h3>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="i">
+                        <div class="a1">
+                            <div>
+                                <h3>Title </h3>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </footer>
+    <footer>
+        <div class="last">
+            <div>
+                <h3>CONTACT</h3>
+                <P>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit aut at quae quia perferendis est,
+                    rerum sit esse dolores porro</P>
+            </div>
+            <div class="form">
+                <form>
+                    <input type="text" placeholder="Enter Your Name" id="en"><br><br>
+                    <input type="text" placeholder="Enter Your Address" id="ea"><br><br>
+                    <input type="text" placeholder="Enter Your City" id="ec"><br><br>
+                    <input type="text" placeholder="Enter Your Email Address" id="eya"><br><br>
+                    <textarea id="ta" rows="10" cols="50" placeholder="Enter Your Email Message..."></textarea><br><br>
+                    <button>SUBMIT</button>
+                </form>
+                <div class="foa">
+                    <a href="h">Home</a>
+                    <a href="a">About</a>
+                    <a href="t">Team</a>
+                    <a href="p">Portfolio</a>
+                    <a href="c">Contact</a>
+                </div>
+                <div>
+                    Copyright &copy; Sanjay 2023. All Rights Reserved
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
